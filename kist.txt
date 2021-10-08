@@ -1,0 +1,69 @@
+[Rule]
+DOMAIN-KEYWORD,geosite:category-ads-all,REJECT
+GEOIP,private,DIRECT
+DOMAIN-SUFFIX,web.jiaotai56.com,DIRECT
+DOMAIN-SUFFIX,api.jsdama.com,DIRECT
+DOMAIN-SUFFIX,tbs.imtt.qq.com,DIRECT
+DOMAIN-SUFFIX,dldir1.qq.com,DIRECT
+DOMAIN-SUFFIX,rola-ip.co,DIRECT
+IP-CIDR,47.56.188.64/16,DIRECT
+IP-CIDR,139.199.13.14/16,DIRECT
+IP-CIDR,103.118.42.4/16,DIRECT
+IP-CIDR,161.117.239.16/16,DIRECT
+DOMAIN-SUFFIX,api.ma37.com,DIRECT
+DOMAIN-SUFFIX,dlied1.cdntips.net,DIRECT
+DOMAIN-SUFFIX,web.jiemite.com,DIRECT
+DOMAIN-SUFFIX,web2.jiemite.com,DIRECT
+DOMAIN-SUFFIX,vinasim.xyz,DIRECT
+DOMAIN-SUFFIX,k76sk.com,DIRECT
+DOMAIN-SUFFIX,t.captcha.qq.com,DIRECT
+DOMAIN-SUFFIX,log.tbs.qq.com,DIRECT
+DOMAIN-SUFFIX,com.wjmt.app,DIRECT
+DOMAIN-SUFFIX,com.cyjh.mobileanjian,DIRECT
+IP-CIDR,8.134.75.81/32,DIRECT
+FINAL,PROXY
+
+[DnsServer]
+223.5.5.5
+114.114.114.114
+8.8.8.8,53,REMOTE
+8.8.4.4
+
+[DnsRule]
+DOMAIN-KEYWORD,google,REMOTE
+DOMAIN-KEYWORD,android,REMOTE
+DOMAIN-KEYWORD,fbcdn,REMOTE
+DOMAIN-KEYWORD,facebook,REMOTE
+DOMAIN-SUFFIX,fb.com,REMOTE
+DOMAIN-KEYWORD,instagram,REMOTE
+DOMAIN-KEYWORD,whatsapp,REMOTE
+DOMAIN-KEYWORD,qq,REMOTE
+DOMAIN-KEYWORD,weixin,REMOTE
+DOMAIN-SUFFIX,qq.com,REMOTE
+
+[DnsHost]
+// Static DNS map that functions in the same way as /etc/hosts.
+
+localhost = 127.0.0.1
+www.localnetwork.uop = 127.0.0.1
+
+[DnsClientIp]
+// Client IP for EDNS Client Subnet extension, a single IP address.
+
+115.239.211.92
+
+[RoutingDomainStrategy]
+// https://www.v2ray.com/chapter_02/03_routing.html
+
+IPIfNonMatch
+
+[LocalPolicy]
+bufferSize = 4096
+connIdle = 120
+downlinkOnly = 0
+handshake = 4
+uplinkOnly = 0
+
+[Log]
+// Logging level for V2Ray
+loglevel = warning
